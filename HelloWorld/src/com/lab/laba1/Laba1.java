@@ -30,6 +30,7 @@ public class Laba1 {
         }
     }
 
+
     public String strParsing(String in) {
         String copyIn = in;
         StringBuilder result = new StringBuilder();
@@ -52,7 +53,19 @@ public class Laba1 {
                 break;
             }
         }
-        return result.toString();
+        if(checkComment(in)==3) {
+            return "here comment";
+        }else{
+            return result.toString();
+        }
+    }
+
+    private int checkComment(String in) {
+        if (in.charAt(0) == '/' && in.charAt(1)=='*' && in.charAt(in.length()-2)=='*'&& in.charAt(in.length()-1)=='/') {
+            return 3;
+        } else {
+            return 2;
+        }
     }
 
     private int workWithCsv(String in) {
