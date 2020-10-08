@@ -59,7 +59,7 @@ public class Laba1 {
             return result.toString();
         }
     }
-
+//hello
     private int checkComment(String in) {
         if (in.charAt(0) == '/' && in.charAt(1)=='*' && in.charAt(in.length()-2)=='*'&& in.charAt(in.length()-1)=='/') {
             return 3;
